@@ -58,7 +58,7 @@ async function calculateAge() {
             onErrorClrDisplayYear.classList.add('error-clr-display');
             yearsInput.style.borderColor = '#FF5959';
         }
-        else if (userYearInput.trim() === '' || userYearInput > currentDate.getFullYear() ) {
+        else if (userYearInput.trim() === '' || userYearInput > currentDate.getFullYear() || userYearInput < 0) {
             isError = true;
             console.log('input box is empty');
             onErrorYearDisplay.classList.add('transition-all')
@@ -76,7 +76,7 @@ async function calculateAge() {
             monthInput.style.borderColor = '#FF5959';
             
         }
-        else if (userMonthInput.trim() === '' || userMonthInput > 12) {
+        else if (userMonthInput.trim() === '' || userMonthInput > 12 || userMonthInput < 0) {
             isError = true;
             console.log('not a number');
             onErrorMonthDisplay.classList.add('transition-all')
@@ -93,7 +93,7 @@ async function calculateAge() {
             daysInput.style.borderColor = '#FF5959';
 
         }
-        else if (userDayInput.trim() === '' || userDayInput > 31) {
+        else if (userDayInput.trim() === '' || userDayInput > 31 || userDayInput < 0 ) {
             isError = true;
             console.log('not a number');
             onErrorDayDisplay.classList.add('transition-all')

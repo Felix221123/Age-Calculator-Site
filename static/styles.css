@@ -1,0 +1,444 @@
+/* custom css reset */
+/* Box sizing rules */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100,200,700;1,400;1,800&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: transparent;
+  outline: none;
+  border: 0;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ul,
+ol[role=list] {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Set core root defaults */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  overflow-x: hidden;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@font-face {
+  font-family: "Poppins", sans-serif;
+  src: url(assets/fonts/Poppins-Regular.ttf) format(truetype);
+  font-weight: 400;
+  font-display: swap;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Poppins", sans-serif;
+  src: url(assets/fonts/Poppins-Bold.ttf) format(truetype);
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins", sans-serif;
+  src: url(assets/fonts/Poppins-ExtraBoldItalic.ttf) format(truetype);
+  font-weight: 800;
+  font-display: swap;
+  font-style: italic;
+}
+body {
+  display: grid;
+  place-items: center;
+  background-color: hsl(0, 0%, 94%);
+}
+
+.main-body-container {
+  width: 91%;
+  height: clamp(30.375rem, 30.5vw, 30.5rem);
+  border-radius: 0rem;
+  background-color: hsl(0, 0%, 100%);
+  top: 9%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+  padding: clamp(2.5rem, 2.6vw, 2.6rem) clamp(1rem, 1.2vw, 1.2rem);
+  border-radius: 1.5rem 1.5rem 6rem 1.5rem;
+  box-shadow: 0px 15px 80px rgba(23, 42, 93, 0.1);
+}
+.main-body-container > .dates-container {
+  display: grid;
+  grid-template-columns: repeat(3, 0.32fr);
+  place-items: center;
+}
+.main-body-container > .dates-container > .day-input-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.3rem;
+}
+.main-body-container > .dates-container > .day-input-container > form {
+  width: 5.479375rem;
+  height: 3.375rem;
+  border: none;
+}
+.main-body-container > .dates-container > .day-input-container > form > label {
+  width: 100%;
+  border: none;
+}
+.main-body-container > .dates-container > .day-input-container > form > label > input {
+  width: 100%;
+  height: 100%;
+  border: 1px solid hsla(0, 1%, 44%, 0.3);
+  border-radius: 0.5rem;
+  font-family: "Poppins", sans-serif;
+  font-variation-settings: "wght" 700;
+  font-size: clamp(1.25rem, 1.3vw, 1.3rem);
+  letter-spacing: 1%;
+  color: hsl(0, 0%, 8%);
+  padding: 0rem 0rem 0rem 0.7rem;
+}
+.main-body-container > .dates-container > .day-input-container > form > label > input:hover, .main-body-container > .dates-container > .day-input-container > form > label > input :focus, .main-body-container > .dates-container > .day-input-container > form > label > input :active {
+  border-color: hsl(259, 100%, 65%);
+}
+.main-body-container > .dates-container > .month-input-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.3rem;
+}
+.main-body-container > .dates-container > .month-input-container > form {
+  width: 5.479375rem;
+  height: 3.375rem;
+  border: none;
+}
+.main-body-container > .dates-container > .month-input-container > form > label {
+  width: 100%;
+  border: none;
+}
+.main-body-container > .dates-container > .month-input-container > form > label > input {
+  width: 100%;
+  height: 100%;
+  border: 1px solid hsla(0, 1%, 44%, 0.3);
+  border-radius: 0.5rem;
+  font-family: "Poppins", sans-serif;
+  font-variation-settings: "wght" 700;
+  font-size: clamp(1.25rem, 1.3vw, 1.3rem);
+  letter-spacing: 1%;
+  color: hsl(0, 0%, 8%);
+  padding: 0rem 0rem 0rem 0.7rem;
+}
+.main-body-container > .dates-container > .month-input-container > form > label > input:hover, .main-body-container > .dates-container > .month-input-container > form > label > input :focus, .main-body-container > .dates-container > .month-input-container > form > label > input :active {
+  border-color: hsl(259, 100%, 65%);
+}
+.main-body-container > .dates-container > .years-input-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.3rem;
+}
+.main-body-container > .dates-container > .years-input-container > form {
+  width: 5.479375rem;
+  height: 3.375rem;
+  border: none;
+}
+.main-body-container > .dates-container > .years-input-container > form > label {
+  width: 100%;
+  border: none;
+}
+.main-body-container > .dates-container > .years-input-container > form > label > input {
+  width: 100%;
+  height: 100%;
+  border: 1px solid hsla(0, 1%, 44%, 0.3);
+  border-radius: 0.5rem;
+  font-family: "Poppins", sans-serif;
+  font-variation-settings: "wght" 700;
+  font-size: clamp(1.25rem, 1.3vw, 1.3rem);
+  letter-spacing: 1%;
+  color: hsl(0, 0%, 8%);
+  padding: 0rem 0rem 0rem 0.7rem;
+}
+.main-body-container > .dates-container > .years-input-container > form > label > input:hover, .main-body-container > .dates-container > .years-input-container > form > label > input :focus, .main-body-container > .dates-container > .years-input-container > form > label > input :active {
+  border-color: hsl(259, 100%, 65%);
+}
+.main-body-container > .thin-line-btn-container {
+  width: 100%;
+  height: 4.5rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.main-body-container > .thin-line-btn-container > button {
+  position: absolute;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: hsl(259, 100%, 65%);
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+.main-body-container > .thin-line-btn-container > button > img {
+  font-size: clamp(0.3rem, 0.35vw, 0.4rem);
+  transform: scale(0.6);
+}
+.main-body-container > .display-age-container {
+  display: flex;
+  flex-direction: column;
+}
+.main-body-container > .display-age-container > .years-section,
+.main-body-container > .display-age-container .months-section,
+.main-body-container > .display-age-container .days-section {
+  display: flex;
+  flex-direction: row;
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+}
+.main-body-container > .display-age-container > .years-section > .same-style,
+.main-body-container > .display-age-container .months-section > .same-style,
+.main-body-container > .display-age-container .days-section > .same-style {
+  font-family: "Poppins", sans-serif;
+  font-variation-settings: "wght" 800, "ital" 1;
+  color: hsl(0, 0%, 8%);
+  letter-spacing: -2%;
+  line-height: 110%;
+  font-size: clamp(3.5rem, 3.6vw, 3.6rem);
+}
+.main-body-container > .display-age-container > .years-section > #years-age,
+.main-body-container > .display-age-container > .years-section #months-age,
+.main-body-container > .display-age-container > .years-section #days-age,
+.main-body-container > .display-age-container .months-section > #years-age,
+.main-body-container > .display-age-container .months-section #months-age,
+.main-body-container > .display-age-container .months-section #days-age,
+.main-body-container > .display-age-container .days-section > #years-age,
+.main-body-container > .display-age-container .days-section #months-age,
+.main-body-container > .display-age-container .days-section #days-age {
+  font-family: "Poppins", sans-serif;
+  font-variation-settings: "wght" 800, "ital" 1;
+  font-weight: 800;
+  font-style: italic;
+  letter-spacing: 0.2rem;
+  font-style: italic;
+  line-height: 110%;
+  font-size: clamp(3.5rem, 3.6vw, 3.6rem);
+  color: hsl(259, 100%, 65%);
+}
+
+hr {
+  height: 0.5px;
+  background-color: #716F6F;
+  opacity: 0.3;
+  width: 100%;
+}
+
+.user-display-style {
+  font-family: "Poppins", sans-serif;
+  font-variation-settings: "wght" 700;
+  color: #716F6F;
+  letter-spacing: 0.25rem;
+  font-size: clamp(0.75rem, 0.8vw, 0.8rem);
+  text-transform: uppercase;
+}
+
+.error-style {
+  text-align: left;
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  color: #FF5959;
+  font-style: italic;
+  font-size: clamp(0.55rem, 0.55vw, 0.6rem);
+}
+
+.error-clr-display {
+  color: #FF5959;
+}
+
+.border-clr-display {
+  border: 1px solid #FF5959;
+}
+
+.transition-all {
+  transition: all 0.5s;
+}
+
+@media (min-width: 1000px) {
+  .main-body-container {
+    width: 52.5rem;
+    height: 40.6875rem;
+    border-radius: 2rem 2rem 15rem 2rem;
+    padding: clamp(3.5rem, 3.6vw, 3.6rem) clamp(3rem, 3.2vw, 3.2rem);
+  }
+  .main-body-container > .dates-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    -moz-column-gap: 3rem;
+         column-gap: 3rem;
+  }
+  .main-body-container > .dates-container > .day-input-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+  }
+  .main-body-container > .dates-container > .day-input-container > form {
+    width: 10rem;
+    height: 4.5rem;
+  }
+  .main-body-container > .dates-container > .day-input-container > form > label > input {
+    padding: 0rem 0rem 0rem 1.4rem;
+    font-size: clamp(1.9rem, 1.95vw, 2rem);
+  }
+  .main-body-container > .dates-container > .day-input-container > form > label > input:hover {
+    border-color: hsl(259, 100%, 65%);
+  }
+  .main-body-container > .dates-container > .month-input-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+  }
+  .main-body-container > .dates-container > .month-input-container > form {
+    width: 10rem;
+    height: 4.5rem;
+  }
+  .main-body-container > .dates-container > .month-input-container > form > label > input {
+    padding: 0rem 0rem 0rem 1.4rem;
+    font-size: clamp(1.9rem, 1.95vw, 2rem);
+  }
+  .main-body-container > .dates-container > .month-input-container > form > label > input:hover {
+    border-color: hsl(259, 100%, 65%);
+  }
+  .main-body-container > .dates-container > .years-input-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+  }
+  .main-body-container > .dates-container > .years-input-container > form {
+    width: 10rem;
+    height: 4.5rem;
+  }
+  .main-body-container > .dates-container > .years-input-container > form > label > input {
+    padding: 0rem 0rem 0rem 1.4rem;
+    font-size: clamp(1.9rem, 1.95vw, 2rem);
+  }
+  .main-body-container > .dates-container > .years-input-container > form > label > input:hover {
+    border-color: hsl(259, 100%, 65%);
+  }
+  .main-body-container > .thin-line-btn-container {
+    height: 6rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .main-body-container > .thin-line-btn-container > button {
+    position: absolute;
+    width: 6rem;
+    height: 6rem;
+    right: 0;
+  }
+  .main-body-container > .thin-line-btn-container > button:hover {
+    background-color: hsl(0, 0%, 8%);
+  }
+  .main-body-container > .thin-line-btn-container > button > img {
+    font-size: clamp(0.5rem, 0.55vw, 0.6rem);
+    transform: scale(0.7);
+  }
+  .main-body-container > .display-age-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .main-body-container > .display-age-container > .years-section,
+  .main-body-container > .display-age-container .months-section,
+  .main-body-container > .display-age-container .days-section {
+    display: flex;
+    flex-direction: row;
+    -moz-column-gap: 1rem;
+         column-gap: 1rem;
+  }
+  .main-body-container > .display-age-container > .years-section > .same-style,
+  .main-body-container > .display-age-container .months-section > .same-style,
+  .main-body-container > .display-age-container .days-section > .same-style {
+    font-size: clamp(7rem, 7.5vw, 8rem);
+  }
+  .main-body-container > .display-age-container > .years-section > #years-age,
+  .main-body-container > .display-age-container > .years-section #months-age,
+  .main-body-container > .display-age-container > .years-section #days-age,
+  .main-body-container > .display-age-container .months-section > #years-age,
+  .main-body-container > .display-age-container .months-section #months-age,
+  .main-body-container > .display-age-container .months-section #days-age,
+  .main-body-container > .display-age-container .days-section > #years-age,
+  .main-body-container > .display-age-container .days-section #months-age,
+  .main-body-container > .display-age-container .days-section #days-age {
+    font-size: clamp(7rem, 7.5vw, 8rem);
+  }
+  .user-display-style {
+    font-size: clamp(0.85rem, 0.9vw, 0.95rem);
+  }
+  hr {
+    opacity: 0.2;
+    height: 0.5px;
+  }
+}
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.fade-in.active {
+  opacity: 1;
+  transform: translateY(0);
+}/*# sourceMappingURL=styles.css.map */

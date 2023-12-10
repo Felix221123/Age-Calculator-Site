@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- desktop icon image -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+
+    <!-- font awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.css" />
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap" rel="stylesheet">
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="static/styles.css">
+    
+    <title>Frontend Mentor | Age calculator app</title>
+  </head>
+
+  <body>
+
+    <div class="main-body-container">
+      <div class="dates-container">
+        
+        <div class="day-input-container">
+          <p class="user-display-style" id="onError-day">day</p>
+          <form action="">
+            <label for="days">
+              <input type="number" id="days" placeholder="DD" required>
+            </label>
+          </form>
+          <p class="error-style" id="wrong-day-input" style="display: none;">Must be a valid day</p>
+        </div>
+
+        <div class="month-input-container">
+          <p class="user-display-style" id="onError-month">month</p>
+          <form action="">
+            <label for="months">
+              <input type="number" id="months" placeholder="MM" required>
+            </label>
+          </form>
+          <p class="error-style" id="wrong-month-input" style="display: none;">Must be a valid month</p>
+        </div>
+
+        <div class="years-input-container">
+          <p class="user-display-style" id="onError-year">year</p>
+          <form action="">
+            <label for="years">
+              <input type="number" id="years" placeholder="YYYY" required>
+            </label>
+          </form>
+          <p class="error-style" id="wrong-year-input" style="display: none;">Must be in the past</p>
+        </div>
+
+      </div>
+
+      <div class="thin-line-btn-container">
+        <hr>
+        <button id="myage">
+          <img src="assets/images/icon-arrow.svg" alt="an arrow facing down">
+        </button>
+      </div>
+
+      <div class="display-age-container">
+        <article class="years-section">
+          <p id="years-age">--</p>
+          <p class="same-style">years</p>
+        </article>
+
+        <article class="months-section">
+          <p id="months-age">--</p>
+          <p class="same-style">months</p>
+        </article>
+
+        <article class="days-section">
+          <p id="days-age">--</p>
+          <p class="same-style">days</p>
+        </article>
+      </div>
+    </div>
+
+
+    <script src="app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js"></script>
+
+  </body>
+</html>
